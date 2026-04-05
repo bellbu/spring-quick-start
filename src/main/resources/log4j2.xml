@@ -3,16 +3,16 @@
 <Configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
 	<!-- Appenders -->
-	<Appender> 
+	<Appenders> 
 		<Console name="console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%-5p: %c - %m%n" />
 		</Console>
-	</Appender>
+	</Appenders>
 	
 	<!-- Logger -->
 	<Loggers>
 		<Logger name="org.springframework" level="DEBUG" additivity="false">
-			<appender-ref ref="console" />
+			<Appender-ref ref="console" />
 		</Logger>
 	</Loggers>
 	
