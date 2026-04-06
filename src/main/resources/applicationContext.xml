@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns: 기본 네임스페이스 선언 -->
+<!-- xmlns:xsi: xsi 네임스페이스 선언 -->
+<!-- xsi:schemaLocation: xsi 네임스페이스에 속한 속성 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="tv" class="polymorphism.SamsungTV"/>
+	<bean id="tv" class="polymorphism.SamsungTV" init-method="initMethod" destroy-method="destroyMethod" lazy-init="true" scope="singleton"/>
 </beans>
